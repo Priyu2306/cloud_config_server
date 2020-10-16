@@ -1,0 +1,17 @@
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          filter:
+            commonsRequestLoggingFilter: DEBUG
+filetodb:
+  chunksize: 500
+  sourcepath: resources/movie.json
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/springFileToDb'
+    username: root
+    password: root
+    driverClassName: com.mysql.cj.jdbc.Driver
+    sqlquery: >-
+    SELECT TITLE,YERARS,CAST,GENRE FROM MOVIE
